@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> ❤️ Happy Birthday ❤️</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+    body {
+      font-family: 'Press Start 2P', cursive;
+      background: linear-gradient(135deg, #ffeef2, #ffe0f0);
+      text-align: center;
+      padding: 50px;
+      color: #333;
+      overflow: hidden;
+
+      /*display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;*/
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .card {
+        background: white;
+        padding: 30px;
+        border-radius: 15px;
+        /*max-width: 95%;
+        width: 500px;*/
+
+        width: 500px;
+        max-width: 90%;
+
+        /* height removed, use min-height if you want a base size */
+        min-height: 300px;   /* optional, ensures small cards aren't tiny */
+        max-height: 90vh;    /* optional, prevents huge cards on big screens */
+
+        margin: auto;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        position: relative;
+        z-index: 2;
+
+        display: flex;
+        flex-direction: column;   /* ensures vertical stacking */
+        align-items: center;      /* center content horizontally */
+        justify-content: space-between; /* optional for spacing */
+
+        animation: popIn 0.5s ease-out;
+    }
+
+    p {
+        line-height: 1.5;   /* more breathing room */
+        margin-top: 15px;
+        font-size: 10px;
+    }
+
+    h1 {
+      color: #ff4d6d;
+      font-size: 16px;
+      animation: bounce 1s infinite alternate;
+    }
+
+    img {
+      width: 55%;        /* controls size */
+      max-width: 500px;  /* prevents it getting too big */
+      border-radius: 8px;
+      margin-top: 15px
+      /*image-rendering: pixelated;*/
+    }
+
+    button {
+      background: #be3edb;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 12px;
+      margin-top: 20px;
+      animation: blink 1s infinite;
+    }
+
+    .code {
+        margin-top: 20px;
+        font-size: 12px;
+        font-weight: bold;
+
+        display: block;     /* must exist in layout */
+        opacity: 0;         /* start invisible */
+        transition: opacity 0.5s ease;
+    }
+
+    /* Floating hearts */
+    .heart {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background: #ff4d6d;
+      transform: rotate(45deg);
+      animation: float 6s linear infinite;
+      opacity: 0.7;
+    }
+
+    .heart::before, .heart::after {
+      content: "";
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background: #ff4d6d;
+      border-radius: 50%;
+    }
+
+    .heart::before { top: -5px; left: 0; }
+    .heart::after { left: -5px; top: 0; }
+
+    @keyframes popIn { 0% { transform: scale(0.5); opacity: 0; } 100% { transform: scale(1); opacity: 1; } }
+    @keyframes bounce { 0% { transform: translateY(0); } 100% { transform: translateY(-5px); } }
+    @keyframes blink { 0%, 50%, 100% { opacity: 1; } 25%, 75% { opacity: 0.6; } }
+    @keyframes float { 0% { transform: translateY(100vh) rotate(45deg); opacity: 0; } 50% { opacity: 0.8; } 100% { transform: translateY(-10vh) rotate(45deg); opacity: 0; } }
+  
+    @media (max-width: 600px) {
+        body {
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 12px;
+        }
+
+        p {
+            font-size: 10px;
+        }
+
+        button {
+            font-size: 10px;
+            padding: 10px;
+        }
+    }
+
+    @media (min-width: 1200px) {
+      .card {
+        width: 650px;   /* bigger on large screens */
+      }
+    }
+
+    button {
+        background: #ff4d6d;           /* bright pixel color */
+        color: white;
+        border: 4px solid #ff85a2;     /* pixel-style border */
+        padding: 12px 20px;
+        border-radius: 0;              /* no rounded corners, sharp edges */
+        cursor: pointer;
+        font-family: 'Press Start 2P', cursive;  /* pixel font */
+        font-size: 12px;
+        text-transform: uppercase;
+        box-shadow: 4px 4px 0 #c43b5d; /* gives retro “button depth” */
+        display: block;
+        margin: 20px auto 0 auto;      /* centers button below content */
+        transition: all 0.1s ease-in-out;
+    }
+
+    button:active {
+        transform: translate(2px, 2px);  /* looks like it’s being pressed */
+        box-shadow: 2px 2px 0 #c43b5d;
+    }
+
+    button:hover {
+        filter: brightness(1.1);        /* slightly brighter when hovered */
+    }
+
+    .emoji {
+        font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif;
+        image-rendering: auto; /* default, so it’s smooth */
+    }
+  </style>
+</head>
+
+<body>
+  <div class="card">
+    <h1> <span class="emoji">🎉</span> Happy Birthday, Huy! <span class="emoji">🎉</span> </h1>
+    <p>
+      I can't believe you're turning 26 today! <br><br>
+      It feels like yesterday we were just two teenagers staying up late to chat about the most random things. Please continue to be my lovely best friend and boyfriend for many more years. <br><br>
+      Thank you for being born and I hope you stay healthy and happy forever! <br><br>
+      I love you so much <span class="emoji">💖</span>
+    </p>
+
+    <img src="bf.jpg" alt="cutie_patootie" />
+
+    <button id="giftButton" onclick="showCode()"> 🎁 Click for your gift 🎁 </button>
+
+    <div class="code" id="giftCode">
+      YOUR-NINTENDO-CODE-HERE
+    </div>
+  </div>
+
+  <audio id="bgMusic" loop>
+    <source src="music.mp3" type="audio/mpeg">
+  </audio>
+
+  <script>
+    function showCode() {
+        // Change button text
+        const button = document.getElementById("giftButton");
+        button.textContent = "🎮 Happy gaming! 🎮";
+
+        // Show code
+        const code = document.getElementById("giftCode");
+        code.style.opacity = "1";
+
+        // Play music
+        document.getElementById("bgMusic").play();
+
+        // Launch confetti
+        launchConfetti();
+    }
+
+    // Floating hearts
+    function createHeart() {
+      const heart = document.createElement("div");
+      heart.classList.add("heart");
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.animationDuration = (Math.random() * 3 + 3) + "s";
+      document.body.appendChild(heart);
+      setTimeout(() => { heart.remove(); }, 6000);
+    }
+    setInterval(createHeart, 300);
+
+    // Confetti for ~1 minute
+    function launchConfetti() {
+      const duration = 60000;
+      const end = Date.now() + duration;
+      const interval = setInterval(() => {
+        if (Date.now() > end) { clearInterval(interval); return; }
+        for (let i = 0; i < 10; i++) {
+          const confetti = document.createElement("div");
+          confetti.style.position = "fixed";
+          confetti.style.width = "6px";
+          confetti.style.height = "6px";
+          confetti.style.background = `hsl(${Math.random() * 360}, 100%, 70%)`;
+          confetti.style.top = "0";
+          confetti.style.left = Math.random() * 100 + "vw";
+          confetti.style.opacity = Math.random();
+          confetti.style.transform = `rotate(${Math.random() * 360}deg)`;
+          confetti.style.transition = "transform 3s linear, top 3s linear, opacity 3s";
+          document.body.appendChild(confetti);
+          setTimeout(() => {
+            confetti.style.top = "100vh";
+            confetti.style.transform += ` translateY(100vh) rotate(${Math.random() * 720}deg)`;
+            confetti.style.opacity = 0;
+          }, 10);
+          setTimeout(() => { confetti.remove(); }, 1000);
+        }
+      }, 200);
+    }
+  </script>
+
+</body>
+</html>
